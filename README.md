@@ -49,7 +49,7 @@ real-world data**: run Chameleon (a released checkpoint, e.g. with `predict_imag
 notebook) on images you collected or found yourself, outside the benchmark datasets, and analyse
 the results. Re-running the demo data does not count.
 
-If you do a track, say which one in your write-up and on your first slide. The bar for earning
+If you do a track, say which one in your write-up and on your title slide. The bar for earning
 the bonus is under [Evaluation](#evaluation).
 
 You are free to choose **any problem**, but your project must **use Chameleon for dense
@@ -126,8 +126,7 @@ score**.
 - **Track B apps**: the pipeline (model loading, prediction, and any generation step) must still
   run end to end in your notebook. Code that cannot live in a notebook (a mobile app, a web
   front end) goes in a separate `.zip` (see below) and does not replace the notebook.
-- **Every result you submit must come from your own code.** Do not submit outputs produced by an
-  external service or by someone else's trained weights presented as your own.
+- **Every result you submit must come from your own code.**
 - **List every pretrained weight you use** in your write-up with a source link, starting with the
   Chameleon checkpoint, and any other pretrained model you use alongside it (e.g. the generator in
   a Track B system, or the backbone of a distilled model). Using a pretrained model is expected;
@@ -152,9 +151,6 @@ Submit a single ZIP file named `{STUDENT_ID}_{NAME}_project.zip` containing:
      pretrained weight you loaded with its source.
    - **Method and setup**: model, hyperparameters, training and inference settings.
    - **Results and analysis**: qualitative results (demonstration of your system) and any analysis.
-   - **If you did Track B — system design and evaluation**: the architecture of your system (which
-     component does what), how the dense prediction feeds the rest, and how you evaluated the
-     whole: latency, memory, robustness on real inputs, and usefulness.
 3. **Presentation slides** — a PDF, PPTX, or Keynote (`.key`) file.
 4. **Data (if applicable)** — your images and labels as a single `.zip`, so the TA can reproduce
    your results. If the data is too large, submit a representative subset plus a download link.
@@ -210,7 +206,10 @@ submissions will not be accepted.**
 
 Each student should prepare a **5-minute presentation** for the session on 10/8 (in class).
 
-- **Slides: up to 6 slides**, submitted to KLMS with the other deliverables by the deadline.
+- **Slides: up to 6 slides** plus a title slide, submitted to KLMS with the other deliverables by
+  the deadline.
+  - **Title slide** (does not count toward the 6-slide limit): project title, name, student ID. If
+    you took a track (A/B), say which one here.
   - **Slide 1:** the problem and your best results.
   - **Remaining slides:** how you formulated it, what data you used, what you tried, and what you
     learned.
@@ -245,9 +244,9 @@ real-world data of your own (see above). A track counts as completed when:
 
 - **Track A — Fine-tuning:** you changed the data and/or task (not one of the five demo tasks
   as-is), fine-tuned Chameleon on it yourself, and report its results against held-out labels.
-- **Track B — System building:** a working application uses a dense prediction as its essential
-  component, runs end to end (the model part in your notebook), and is evaluated beyond a
-  demo, e.g. with quality, latency or memory measurements, or a failure case study.
+- **Track B — System building:** you built a working application that uses a dense prediction as
+  its essential component (the model part runs in your notebook), and you demonstrated that the
+  system works for the target real-world scenario.
 
 ## AI Coding Assistant Tool Policy
 
