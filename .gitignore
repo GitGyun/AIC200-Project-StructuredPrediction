@@ -1,0 +1,23 @@
+# chameleon writes this at runtime; it points at whatever machine you are on
+chameleon/data_paths.yaml
+
+# checkpoints and datasets are distributed separately (see assets/PLACEHOLDERS.md)
+checkpoints/
+demo_data/
+*.ckpt
+*.pth
+# ...except the small dataset indices the downstream loaders read (see chameleon/PATCHES.md §7)
+!chameleon/dataset/meta_info/**/*.pth
+
+# notebook / python noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+experiments/
+lightning_logs/
+results*/
+
+# agent tooling state
+.omc/
+
+drive*

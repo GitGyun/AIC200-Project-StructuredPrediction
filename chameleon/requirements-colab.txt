@@ -1,0 +1,17 @@
+# Dependencies for the AIC200 starter notebook on Google Colab.
+# Colab already ships torch / torchvision / numpy / scipy / matplotlib / opencv built against its
+# own CUDA, so they are deliberately not pinned here. See chameleon/PATCHES.md.
+
+pytorch_lightning==2.4.0
+timm==0.6.13        # 0.6.12 fails to import on Python >= 3.11 (Colab runs 3.12)
+easydict
+einops
+scikit-image
+pycocotools
+fastremap
+numba
+flow_vis
+tensorboard
+tqdm
+# xtcocotools is deliberately absent: it has no Python 3.12 wheel (Colab) and only COCO keypoint-AP
+# evaluation needs it. To evaluate AP-10K: pip install cython && pip install --no-build-isolation xtcocotools
